@@ -23,32 +23,14 @@ public class Main {
     Runner 1 берет палочку*/
 
     public static void main(String[] args) throws InterruptedException {
-        Runner runners = new Runner();
-        for (int i = 2; i < 6; i++) {
-            RunnerThread rt = new RunnerThread(runners, "Runner " + i);
+      RunnerThread rt = new RunnerThread();
+      Thread t = new Thread(rt);
+        for (int i = 1; i <6 ; i++) {
 
-            System.out.println("Runner" + --i + " берет палочку");
-            System.out.println("Runner" + i + " бежит к " + "Runner" + ++i);
-            rt.start();
-            rt.join();
-            Thread.sleep(5000);
+            t.setName("Runner" + i );
         }
-        for (int i = 6; i > 2; ++i) {
-            RunnerThread rt = new RunnerThread(runners, "Runner " + i);
-            System.out.println("Runner" + --i + " берет палочку");
-            System.out.println("Runner" + i + " бежит к " + "Runner" + --i);
-            rt.start();
-            rt.join();
-            Thread.sleep(5000);
+        t.start();
+        t.join();
 
-
-        }
-
-	/*String  [] runner = {"Runner 1" , "Runner 2", "Runner 3", "Runner 4", "Runner 5"};
-
-
-
-        }
-    }*/
     }
 }
