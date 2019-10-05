@@ -22,15 +22,9 @@ public class Main {
     Runner 2 бежит к Runner 1
     Runner 1 берет палочку*/
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args)  {
       RunnerThread rt = new RunnerThread();
-      Thread t = new Thread(rt);
-        for (int i = 1; i <6 ; i++) {
-
-            t.setName("Runner" + i );
-        }
-        t.start();
-        t.join();
+   rt.start();
 
     }
 }
