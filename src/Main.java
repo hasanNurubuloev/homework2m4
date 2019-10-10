@@ -23,10 +23,12 @@ public class Main {
     Runner 1 берет палочку*/
 
     public static void main(String[] args) throws InterruptedException {
+        for (int i = 1; i <=5 ; i++) {
 
             RunnerThread rt = new RunnerThread();
-           rt.start();
-           rt.join();
+            rt.start();
+            rt.join();
+        }
 
 
 
