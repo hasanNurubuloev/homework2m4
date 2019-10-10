@@ -28,6 +28,7 @@ public class Main {
             RunnerThread rt = new RunnerThread();
             rt.start();
             rt.join();
+        break;
         }
 
 
