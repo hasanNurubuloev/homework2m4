@@ -22,9 +22,14 @@ public class Main {
     Runner 2 бежит к Runner 1
     Runner 1 берет палочку*/
 
-    public static void main(String[] args)  {
-      RunnerThread rt = new RunnerThread();
-   rt.start();
+    public static void main(String[] args) throws InterruptedException {
+
+            RunnerThread rt = new RunnerThread();
+           rt.start();
+           rt.join();
+
+
+
 
     }
 }
